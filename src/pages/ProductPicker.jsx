@@ -63,11 +63,11 @@ const ProductPicker = () => {
         </div>
       </div>
 
-      <code>
+      {/* <code>
         <pre>
           { JSON.stringify( products,null,4 ) }
         </pre>
-      </code>
+      </code> */}
 
     </Layout>
   )
