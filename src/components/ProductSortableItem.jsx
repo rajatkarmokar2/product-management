@@ -16,11 +16,13 @@ const ProductSortableItem = ( { onSortChild,product,index } ) => {
     const toggleCollapse = () => {
         setCollapse( ps => !ps )
     }
-    const openSelectModal = () => setIsOpen( true )
+    const openSelectModal = () => {
+        setIsOpen( true )
+    }
     const closeSelectModal = () => setIsOpen( false )
 
-    const onSubmit = ( product ) => {
-        updateProduct( product.id,product )
+    const onSubmit = ( data ) => {
+        updateProduct( product.id,data )
         closeSelectModal()
     }
 
