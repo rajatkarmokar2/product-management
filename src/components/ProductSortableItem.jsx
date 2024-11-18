@@ -49,8 +49,11 @@ const ProductSortableItem = ( { onSortChild,product,index } ) => {
                     </div>
                 </div>
                 { product.variants.length > 0 && <div className="text-end">
-                    <button onClick={ toggleCollapse } className="text-xs underline text-blue-500">
-                        { collapse ? 'Hide' : 'Show' } variants
+                    <button onClick={ toggleCollapse } className="text-xs text-blue-500">
+                        <span className='underline'>
+                            { collapse ? 'Hide' : 'Show' } variants
+                        </span>
+                        <span className={ `ms-1 inline-block text-center align-middle transition-all ${collapse ? 'rotate-90' : '-rotate-90'}` }>&gt;</span>
                     </button>
                 </div> }
                 <Collapse appear={ true } in={ collapse }>
